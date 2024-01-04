@@ -1,0 +1,8 @@
+[project]
+name = "envoi-channels-cli"
+
+[project.scripts]
+envoi-channels-cli = "envoi_channels_cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
