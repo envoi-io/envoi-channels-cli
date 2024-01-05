@@ -7,11 +7,11 @@ from envoi.channels.aws.ivs import create_channel
 class CreateChannel(CliCommand):
     DESCRIPTION = "Amazon IVS Create Channel"
     PARAMS = {
-        # "authorized": {},
         "channel_name": {
             "required": True
         },
         "authorized": {
+            "type": bool,
             "default": False
         },
         "channel_type": {
@@ -19,7 +19,7 @@ class CreateChannel(CliCommand):
             "default": 'BASIC'
         },
         "insecure_ingest": {
-            "type": bool,
+            "action": "store_false",
             "default": True
         },
         "latency_mode": {
